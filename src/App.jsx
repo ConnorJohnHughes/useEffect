@@ -8,12 +8,12 @@ function App() {
 
 
   return (
-    <>
-    <Header />
-    <Body />
-    <Item />
-    <Footer />
-    </>
+    <div className='app-container'>
+      <Header className="header" />
+      <Body />
+      <Item />
+      <Footer />
+    </div>
   )
 }
 

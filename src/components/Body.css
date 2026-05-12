@@ -1,0 +1,10 @@
+.body-container{
+  border-style: dashed;
+  border-width: 3px;
+  display: flex;
+  width: 55%;
+  height: 80%;
+  justify-self: center;
+  margin-top: 18rem;
+
+}
