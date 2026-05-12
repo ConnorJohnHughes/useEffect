@@ -1,4 +1,6 @@
 import '../components/Item.css'
+import '../components/Image'
+import '../components/StatsList'
 
 export default function Item() {
   return (
