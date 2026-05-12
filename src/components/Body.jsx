@@ -1,4 +1,4 @@
-import './Body.css'
+import '../components/Body.css'
 
 export default function Body(){
     return(
