@@ -2,6 +2,8 @@ import '../components/Header.css'
 
 export default function Header() {
   return (
-    <h1 className='header-h1'>This is the header component!</h1>
+    <header className='header'>
+      <h1 className='header-h1'>useEffect PokeDex</h1>
+    </header>
   )
 }

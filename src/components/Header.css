@@ -1,5 +1,10 @@
-.header-h1{
-    display: flex;
-    justify-self: flex-end;
-    padding-right: 25%;
+@font-face {
+  font-family: "Pokemon";
+  src: url("/fonts/Pokemon Hollow.ttf");
+}
+
+.header-h1 {
+  font-family: "Pokemon", sans-serif;
+  font-size: 60px;
+
 }

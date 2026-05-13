@@ -1,7 +1,9 @@
 import '../components/Image.css'
 
-export default function Image() {
+export default function Image({pokemonImage}) {
   return (
-    <h1>This is Image component!</h1>
+    <div className='image-component'>
+      <img src={pokemonImage?.sprites.front_default} alt="image of Pokemon" />
+    </div>
   )
 }
