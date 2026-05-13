@@ -1,9 +1,14 @@
 import '../components/Item.css'
-import '../components/Image'
-import '../components/StatsList'
+import Image from '../components/Image'
+import StatsList from '../components/StatsList'
 
 export default function Item() {
   return (
-    <h1>This is the Item component!</h1>
+    <>
+      <h1>This is the Item component!</h1>
+      <Image />
+      <StatsList />
+    </>
+    
   )
 }
