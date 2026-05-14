@@ -9,6 +9,8 @@ function App() {
 
   const [allPokemon, setAllPokemon] = useState([])
 
+  const [pokemonData, setPokemonData] = useState(null);
+
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0")
     .then(res => res.json())
@@ -18,10 +20,24 @@ function App() {
       })
   }, [])
 
+  useEffect(() => {
+    if(allPokemon.length === 0) return
+    
+    fetch(allPokemon[0].url)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data)
+      setPokemonData(data)
+    })
+  },[allPokemon])
+
   return (
     <div className='app-container'>
       <Header />
-      <Body allPokemon={allPokemon}/>
+      <Body 
+        allPokemon={allPokemon}
+        pokemonData={pokemonData}
+      />
       <Footer />
     </div>
   )

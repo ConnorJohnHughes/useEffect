@@ -1,22 +1,7 @@
 import '../components/Item.css'
 import Image from '../components/Image'
 import StatsList from '../components/StatsList'
-import { useEffect, useState } from 'react'
-
-export default function Item({pokemonURL, pokemonName}) {
-
-  const [pokemonData, setPokemonData] = useState(null);
-
-  useEffect(() => {
-    if(!pokemonURL) return
-    
-    fetch(pokemonURL)
-    .then(res => res.json())
-    .then(data => {
-      console.log(data)
-      setPokemonData(data)
-    })
-  },[pokemonURL])
+export default function Item({pokemonName, pokemonData}) {
 
   return (
     <div className='item-component'>
@@ -24,6 +9,5 @@ export default function Item({pokemonURL, pokemonName}) {
       <Image pokemonImage={pokemonData}/>
       <StatsList />
     </div>
-    
   )
 }
