@@ -1,9 +1,10 @@
 import '../components/Footer.css'
 
-export default function Footer() {
+export default function Footer(props) {
   return (
     <div className='footer'>
-      <h1>This is the footer component!</h1>
+          <button className='prev-btn' onClick={props.prevPokemon} >PREV</button>
+        <button className='next-btn' onClick={props.nextPokemon}>NEXT</button>
     </div>
   )
 }

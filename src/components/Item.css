@@ -1,0 +1,18 @@
+
+@font-face {
+  font-family: "Pokemon";
+  src: url("/fonts/Pokemon Hollow.ttf");
+}
+
+.pokemon-name{
+  font-family: "Pokemon", sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-style: oblique;
+  font-weight: bolder;
+
+ 
+}
+
+

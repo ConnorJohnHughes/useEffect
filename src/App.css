@@ -1,6 +1,6 @@
 .app-container{
   background-image: url("/images/Pokedex.jpg");
-  background-size: contain;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
  
@@ -8,44 +8,77 @@
   background-color: green;
   position: relative;
   width: 100vw;
+  max-width: 1600px;
   height: 100vh;
+  justify-self: center;
+  aspect-ratio: 16/9;
+  margin: 0 auto;
 
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  overflow: hidden;
 }
 
 .header {
   position: absolute;
-  top: -5%;
+  top: -8%;
   left: 58%;
+  margin-top: 2rem;
 }
 
 .body-container{
   /* border: 1px dashed black; */
   position: absolute;
-  width: 58%;
-  height: 65%;
-  left: 22.3%;
-  top: 28.3%;
+  width: 80%;
+  height: 60%;
+  left: 10%;
+  top: 23%;
 }
 
 .statsList{
   /* border: 1px dashed black; */
   position: absolute;
-  right: 3.5%;
-  width: 37%;
-  top: 3%;
-  height: 30%;
+  left: 66%;
+  width: 40%;
+  top: 15%;
+  height: 90%;
+  display: flex;
+  gap: 39px;
+
+
+}
+.heightWeight{
+  /* border: 1px dashed black; */
+  position: absolute;
+  left: 72%;
+  width: 40%;
+  top: 32%;
+  height: 90%;
+  display: flex;
+  gap: 220px;
+
+
 }
 
 .footer{
   /* border: 1px dashed black; */
   position: absolute;
-  bottom: 8%;
-  left: 25%;
+  bottom: 6%;
+  left: 12%;
   height: 10%;
-  width: 10%;
+  width: 45%;
 }
 .image-component{
   position: absolute;
-  left: 5%;
+  left: 2%;
+  top: 8%;
 }
+
+
 

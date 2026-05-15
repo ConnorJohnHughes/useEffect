@@ -10,9 +10,20 @@ function App() {
   const [allPokemon, setAllPokemon] = useState([])
 
   const [pokemonData, setPokemonData] = useState([])
+  
+  const [count, setCount] = useState(0)
+
+  function nextPokemon(){
+    setCount(prevCount => prevCount + 1)
+  }
+  function prevPokemon(){
+    if(!count <= 0){
+      setCount(prevCount => prevCount - 1)
+    }
+  }
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=10&offset=0")
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=100&offset=0")
     .then(res => res.json())
     .then(data => {
         console.log(data.results)
@@ -30,7 +41,7 @@ function App() {
 
     Promise.all(pokeMapper)
       .then(data => {
-        console.log(data)
+        // console.log(data)
         setPokemonData(data)
       })       
   },[allPokemon])
@@ -41,8 +52,13 @@ function App() {
       <Body 
         allPokemon={allPokemon}
         pokemonData={pokemonData}
+        count={count}
+
       />
-      <Footer />
+      <Footer 
+        nextPokemon={nextPokemon}
+        prevPokemon={prevPokemon}
+      />
     </div>
   )
 }
