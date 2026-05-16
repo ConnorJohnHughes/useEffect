@@ -5,6 +5,6 @@
 
 .header-h1 {
   font-family: "Pokemon", sans-serif;
-  font-size: 60px;
+  font-size: clamp(1.5rem, 4vw, 3.75rem);
 
 }

@@ -1,4 +1,6 @@
 .image-component img{
-    width: 450px;
-    height: 450px;
+    width: 20vw;
+    /* max-width: 200px; */
+    min-width: 250px;
+    height: auto;
 }

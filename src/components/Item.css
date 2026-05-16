@@ -6,7 +6,7 @@
 
 .pokemon-name{
   font-family: "Pokemon", sans-serif;
-  font-size: 40px;
+  font-size: clamp(1rem, 3vw, 2.5rem);
   text-transform: uppercase;
   letter-spacing: 8px;
   font-style: oblique;

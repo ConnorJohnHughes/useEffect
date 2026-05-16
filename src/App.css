@@ -22,7 +22,8 @@ body {
 
   min-height: 100vh;
 
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .header {
@@ -44,12 +45,12 @@ body {
 .statsList{
   /* border: 1px dashed black; */
   position: absolute;
-  left: 66%;
+  left: 64%;
   width: 40%;
   top: 15%;
   height: 90%;
   display: flex;
-  gap: 39px;
+  gap: 2vw;
 
 
 }
@@ -61,7 +62,7 @@ body {
   top: 32%;
   height: 90%;
   display: flex;
-  gap: 220px;
+  gap: 12vw;
 
 
 }
@@ -76,9 +77,13 @@ body {
 }
 .image-component{
   position: absolute;
-  left: 2%;
-  top: 8%;
+  left: -2%;
+  top: 10%;
 }
+
+
+
+
 
 
 
