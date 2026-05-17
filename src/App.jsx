@@ -13,6 +13,8 @@ function App() {
   
   const [count, setCount] = useState(0)
 
+  const [searchPokemon, setSearchPokemon] = useState("")
+
   function nextPokemon(){
     setCount(prevCount => prevCount + 1)
   }
@@ -46,13 +48,20 @@ function App() {
       })       
   },[allPokemon])
 
+  const filterPokemon = pokemonData.filter(pokemon => pokemon.name.includes(searchPokemon))
+
   return (
     <div className='app-container'>
-      <Header />
+      <Header 
+        searchPokemon={searchPokemon}
+        setSearchPokemon={setSearchPokemon}
+        setCount={setCount}
+      />
       <Body 
         allPokemon={allPokemon}
         pokemonData={pokemonData}
         count={count}
+        filterPokemon={filterPokemon}
 
       />
       <Footer 

@@ -12,7 +12,7 @@ export default function Body(props){
     <div className="body-container">
         <h1 className='body-h1'></h1>
         <div >
-            {props.pokemonData.map((pokemon, index) => {
+            {props.filterPokemon.map((pokemon, index) => {
                 if(index === props.count){
                     return(
                         <Item 
